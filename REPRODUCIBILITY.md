@@ -123,3 +123,21 @@ The two label-oracle methods use generator-provided event labels and are not dep
 - Reproducibility of offline processing must not be described as reproduction of an attack on Intel TDX hardware.
 
 This guide documents the verified interfaces and the already observed checks. It does not claim that its commands were re-executed in a new clean clone after this document was written.
+
+## Restricted experimental trace material
+
+The T-Time replay dataset includes `trace_replay.jsonl`, which may
+contain RSA private-exponent information associated with experimental
+keys generated for offline evaluation.
+
+These traces are retained to support independent verification of the
+reported replay results. They must not be interpreted as evidence of
+successful key recovery from a live Intel TDX environment.
+
+The repository is intended to remain private while these traces are
+included. Public distribution requires a separate review of the trace
+contents and an explicit decision on redaction, restricted access,
+or replacement with independently generated test material.
+
+The original experimental traces and verification results must not
+be silently modified or regenerated during artifact verification.
