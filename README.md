@@ -81,6 +81,8 @@ The retained trace file matches its recorded SHA-256 digest.
 The original decoder scripts are external dependencies and are not
 included in this repository.
 
+For dependencies, original-source acquisition, verification commands, and acceptance criteria, see the [Reproducibility guide](REPRODUCIBILITY.md).
+
 ## Reproducibility boundaries
 
 Some verification procedures require original datasets, source
