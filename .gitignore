@@ -1,0 +1,11 @@
+*.key
+*.pem
+*.p12
+*.pfx
+.env
+.DS_Store
+__pycache__/
+*.pyc
+*.sqlite
+*.db
+private/

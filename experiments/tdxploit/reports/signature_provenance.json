@@ -1,0 +1,110 @@
+{
+  "01": {
+    "status": "found",
+    "sha256": "f908c7c03728f1f8301cc91449b6c3bc761b096b7912f5eea2a2a6369af719c4",
+    "rows": 10000,
+    "bytes": 1286434
+  },
+  "02": {
+    "status": "found",
+    "sha256": "a10029f7e2e40d8f3d481b0af1a1abe585e7e24196376b9b576ea72d8f67eee6",
+    "rows": 10000,
+    "bytes": 1286134
+  },
+  "04": {
+    "status": "found",
+    "sha256": "7d0493b2f285406597b5d305ab87cec7ba91974e252e46161f15c29531f0b0d5",
+    "rows": 10000,
+    "bytes": 1286134
+  },
+  "05": {
+    "status": "found",
+    "sha256": "56b85ab8d4ef2b1674aa3bf7e3a1bb6d1893ee174a05a925b2e1ca777fd64e81",
+    "rows": 10000,
+    "bytes": 1286196
+  },
+  "07": {
+    "status": "found",
+    "sha256": "12599551939284fcbe271bd5e919ea23aac68051eea8d0e865805209705f6ce8",
+    "rows": 10000,
+    "bytes": 1286270
+  },
+  "11": {
+    "status": "found",
+    "sha256": "c6da3d5764853efcbf55825ca02a51725fbc6c55d9684a876e4a5021d8bfff44",
+    "rows": 10000,
+    "bytes": 1286182
+  },
+  "12": {
+    "status": "found",
+    "sha256": "b4abee61ce417b7a891a595b5d471b71e3e06c305bf1557f92ee0cba8bd924bd",
+    "rows": 10000,
+    "bytes": 30000
+  },
+  "14": {
+    "status": "found",
+    "sha256": "8337e9cdab1297e4d434869d1406eb556878dc9270ddf85906944c0a75f1c4e4",
+    "rows": 10000,
+    "bytes": 1286186
+  },
+  "16": {
+    "status": "found",
+    "sha256": "067e9b59958d1c1cf0cb5a316397f35657bb668be95b48a181f4ec5609bf451c",
+    "rows": 10000,
+    "bytes": 1286314
+  },
+  "17": {
+    "status": "found",
+    "sha256": "715b4b6f65610490d7e66c1cab5b4d6608c52ac48bd5ac089238150f742e8e3b",
+    "rows": 10000,
+    "bytes": 1286110
+  },
+  "18": {
+    "status": "found",
+    "sha256": "d026986eae4c22e608b2dc83d436c3431f83c39a4b1eac4ef357b0bde7f6dd58",
+    "rows": 10000,
+    "bytes": 1286180
+  },
+  "19": {
+    "status": "found",
+    "sha256": "99c8d925bc96cb822415b1104a183f920eac90469d6822ba03a99eed93b36615",
+    "rows": 10000,
+    "bytes": 1286074
+  },
+  "20": {
+    "status": "found",
+    "sha256": "6bae26feaa17c901d4dd398359762ea96dce10f73d5904597fb29f7ece38373d",
+    "rows": 10000,
+    "bytes": 1286290
+  },
+  "21": {
+    "status": "found",
+    "sha256": "e51fbb78ffd141cc024b9256dd52c18458a6233202387f1cf932a53266e66add",
+    "rows": 10000,
+    "bytes": 1286260
+  },
+  "22": {
+    "status": "found",
+    "sha256": "78636eac12434aa43fb3dc9906929f539767073409c8b310ae43fdd8ed2c9c5a",
+    "rows": 10000,
+    "bytes": 1286264
+  },
+  "24": {
+    "status": "found",
+    "sha256": "508eac696342c5d22c26d006fbf66039925ad33437aac6c0b9d06cf077b0a503",
+    "rows": 10000,
+    "bytes": 1286350
+  },
+  "25": {
+    "status": "found",
+    "sha256": "b674774b5dd28ace66e11230c6488aa7d5f7488e3d13b5e3bf4729913049ce18",
+    "rows": 10000,
+    "bytes": 1286292
+  },
+  "26": {
+    "status": "found",
+    "sha256": "0c972c96a47a7b2c505e490f05be11e4d2b1f70d36d78eca4bcbb136db626019",
+    "rows": 10000,
+    "bytes": 1285840
+  }
+}

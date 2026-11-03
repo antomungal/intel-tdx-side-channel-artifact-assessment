@@ -1,0 +1,24 @@
+{
+  "author": "Antonio Mu\u00f1oz - NICS Lab - UMA",
+  "key_size": 2048,
+  "public_exponent": 65537,
+  "public_modulus_sha256": "b84565a2ebcf10ab8d8e0e7c5e7a2af25d555742835bfcd40ff1d71d304e1e76",
+  "crypto_backend": "cryptography",
+  "signature_verified": true,
+  "modular_RSA_check": true,
+  "seed_for_perturbations_only": 20261030,
+  "repeats": 100,
+  "window": 64,
+  "conditions": 25,
+  "trial_method_rows": 7503,
+  "full_baseline_enabled": true,
+  "full_baseline_original_exact": true,
+  "original_script_sha256": {
+    "pattern_second.py": "01ab296dbbf084af1c2dc0e33eee85b41879b28c5e32c376dfceed6af32a1223",
+    "pattern_third.py": "98b55ffc08d3e319bb7b20fb902c68221ab0e19cfeb0c121104d582c1d8cb1b4"
+  },
+  "retained_traces": true,
+  "trace_count": 2501,
+  "interpretation": "Cryptographically valid RSA exponent with SYNTHETIC observation encoding; NOT Intel TDX acquisition.",
+  "trace_replay_sha256": "c8e250317ab411dfbf0b4ab5d3076fe8153be84dec4c8b476ba589c410ce4c52"
+}

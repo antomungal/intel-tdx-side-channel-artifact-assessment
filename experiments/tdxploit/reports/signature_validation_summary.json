@@ -1,0 +1,18 @@
+{
+  "total_selected": 41,
+  "present": 38,
+  "missing": 3,
+  "der_valid": 38,
+  "der_invalid": 0,
+  "provenance_matches": 41,
+  "unique_signature_digests": 38,
+  "counts_by_step": {
+    "44": 17,
+    "42": 24
+  },
+  "der_length_distribution": {
+    "64": 9,
+    "63": 18,
+    "62": 11
+  }
+}

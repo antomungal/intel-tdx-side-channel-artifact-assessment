@@ -1,0 +1,215 @@
+{
+  "files": {
+    "raw": "tdxdown-paper-artifacts/stumble-stepping/td-guest-programs/wolfssl-ecdsa/tracer/page-trace.txt",
+    "marked": "tdxdown-paper-artifacts/stumble-stepping/td-guest-programs/wolfssl-ecdsa/tracer/trace-with-markers.txt",
+    "raw_bytes": 63562890,
+    "marked_bytes": 120566974,
+    "raw_sha256": "deafd3351ff23470b9c1c8b0cd75682a18ffb3b4fe857643113296213405f735",
+    "marked_sha256": "aa2f5102cf0d9748ef3c7fdf9cb86528e3a4d6a9f3220c00878549a9c4d4f1c0"
+  },
+  "parameters": {
+    "target": null,
+    "text_start": null,
+    "exec_end": null
+  },
+  "statistics": {
+    "paired_lines": 4237526,
+    "extra_raw_lines": 0,
+    "extra_marked_lines": 0,
+    "nonsequential_invocation_markers": 0
+  },
+  "raw_address_entries": 4237526,
+  "marked_address_entries": 4237526,
+  "unique_marked_pages": 85,
+  "marked_page_transitions": 129315,
+  "annotations": {
+    "outside text": 239601,
+    "same target page": 2050133,
+    "target invocation": 15
+  },
+  "invocations": [
+    {
+      "line": 61836,
+      "marker_index": 0,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 67732,
+      "marker_index": 1,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 74099,
+      "marker_index": 2,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 75203,
+      "marker_index": 3,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 77671,
+      "marker_index": 4,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 78859,
+      "marker_index": 5,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 84584,
+      "marker_index": 6,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 85833,
+      "marker_index": 7,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 4130951,
+      "marker_index": 8,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 4132476,
+      "marker_index": 9,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 4136450,
+      "marker_index": 10,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 4196820,
+      "marker_index": 11,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 4198348,
+      "marker_index": 12,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 4199876,
+      "marker_index": 13,
+      "address": "0x7fffe45db9fa"
+    },
+    {
+      "line": 4201602,
+      "marker_index": 14,
+      "address": "0x7fffe45db9fa"
+    }
+  ],
+  "top_pages": [
+    {
+      "page": "0x7fffe45db",
+      "count": 2050148
+    },
+    {
+      "page": "0x7fffe45dc",
+      "count": 1068859
+    },
+    {
+      "page": "0x7fffe45d9",
+      "count": 467118
+    },
+    {
+      "page": "0x7fffe45da",
+      "count": 178748
+    },
+    {
+      "page": "0x7fffe43a1",
+      "count": 77493
+    },
+    {
+      "page": "0x7fffe4603",
+      "count": 67386
+    },
+    {
+      "page": "0x7fffe43a0",
+      "count": 48926
+    },
+    {
+      "page": "0x7fffe4602",
+      "count": 47595
+    },
+    {
+      "page": "0x7fffe45df",
+      "count": 46651
+    },
+    {
+      "page": "0x7fffe45de",
+      "count": 29761
+    },
+    {
+      "page": "0x7fffe4275",
+      "count": 25944
+    },
+    {
+      "page": "0x7fffe4605",
+      "count": 19697
+    },
+    {
+      "page": "0x7fffe4246",
+      "count": 14263
+    },
+    {
+      "page": "0x7fffe45dd",
+      "count": 11519
+    },
+    {
+      "page": "0x7fffe45cf",
+      "count": 10901
+    },
+    {
+      "page": "0x7fffe428b",
+      "count": 8716
+    },
+    {
+      "page": "0x7fffe4276",
+      "count": 8567
+    },
+    {
+      "page": "0x7fffe45d0",
+      "count": 8324
+    },
+    {
+      "page": "0x7ffff7fce",
+      "count": 5287
+    },
+    {
+      "page": "0x7fffe45e1",
+      "count": 4898
+    },
+    {
+      "page": "0x7fffe439d",
+      "count": 3662
+    },
+    {
+      "page": "0x7ffff7fcf",
+      "count": 3607
+    },
+    {
+      "page": "0x7fffe425a",
+      "count": 2757
+    },
+    {
+      "page": "0x7fffe4334",
+      "count": 2642
+    },
+    {
+      "page": "0x555555555",
+      "count": 2520
+    }
+  ],
+  "examples": [],
+  "caveats": [
+    "Line-by-line equivalence presumes marked output preserves raw line structure; the original parser ignores non-address lines and does not reproduce them. A mismatch may therefore reflect omitted non-address lines rather than altered addresses.",
+    "The marked file is derived from a trace; it is not an independent capture.",
+    "Address matching and annotation consistency do not establish side-channel leakage or cryptographic key recovery."
+  ]
+}

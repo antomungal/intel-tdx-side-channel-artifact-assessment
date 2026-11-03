@@ -1,0 +1,113 @@
+{
+  "total": 700000,
+  "private_key_present_in_header": true,
+  "message_present_in_header": true,
+  "labels_positive": 14,
+  "selected": [
+    {
+      "index_zero_based": 8696,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 80944,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 175545,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 249225,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 267276,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 346794,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 375976,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 444622,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 464761,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 509007,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 526645,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 553197,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 628579,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    },
+    {
+      "index_zero_based": 674960,
+      "nonce_bit_length": 160,
+      "nonce_15msb": "0b111111111111111",
+      "prefix_matches": true
+    }
+  ],
+  "prefix_comparison": {
+    "(0, False)": 699969,
+    "(1, True)": 14,
+    "(0, True)": 17
+  },
+  "matching_prefix_all": 31,
+  "invalid": [],
+  "note": "Nonce reconstructed using reference private key; not key recovery",
+  "metrics": {
+    "TP": 14,
+    "FP": 0,
+    "FN": 17,
+    "TN": 699969,
+    "precision": 1.0,
+    "recall": 0.45161290322580644,
+    "specificity": 1.0,
+    "selected_fraction": 2e-05,
+    "matching_prefix_fraction": 4.428571428571428e-05
+  },
+  "nonce_prefix_definition": "(k >> 145) == 0x7fff for the 160 most significant bits; 161-bit group order handled separately",
+  "scope": "Offline label verification using reference private key; no lattice recovery or Intel TDX execution"
+}

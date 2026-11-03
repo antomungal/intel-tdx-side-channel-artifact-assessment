@@ -1,0 +1,264 @@
+{
+  "trace-with-markers.txt": {
+    "size_bytes": 120566974,
+    "total_lines": 4237526,
+    "valid_addresses": 4237526,
+    "invalid_lines": 0,
+    "unique_addresses": 12405,
+    "unique_4k_pages": 85,
+    "top_10_pages": [
+      [
+        "0x7fffe45db",
+        2050148
+      ],
+      [
+        "0x7fffe45dc",
+        1068859
+      ],
+      [
+        "0x7fffe45d9",
+        467118
+      ],
+      [
+        "0x7fffe45da",
+        178748
+      ],
+      [
+        "0x7fffe43a1",
+        77493
+      ],
+      [
+        "0x7fffe4603",
+        67386
+      ],
+      [
+        "0x7fffe43a0",
+        48926
+      ],
+      [
+        "0x7fffe4602",
+        47595
+      ],
+      [
+        "0x7fffe45df",
+        46651
+      ],
+      [
+        "0x7fffe45de",
+        29761
+      ]
+    ],
+    "top_10_addresses": [
+      [
+        "0x7fffe45dce18",
+        13045
+      ],
+      [
+        "0x7fffe45dce1b",
+        13045
+      ],
+      [
+        "0x7fffe45dce20",
+        13045
+      ],
+      [
+        "0x7fffe45dce23",
+        13045
+      ],
+      [
+        "0x7fffe45dce26",
+        13045
+      ],
+      [
+        "0x7fffe45dce29",
+        13045
+      ],
+      [
+        "0x7fffe45dce2d",
+        13045
+      ],
+      [
+        "0x7fffe45dce31",
+        13045
+      ],
+      [
+        "0x7fffe45dce35",
+        13045
+      ],
+      [
+        "0x7fffe45dbe70",
+        12165
+      ]
+    ],
+    "annotations": [
+      [
+        "on same page as target",
+        2050133
+      ],
+      [
+        "outside .text section",
+        239601
+      ],
+      [
+        "target invocation 0",
+        1
+      ],
+      [
+        "target invocation 1",
+        1
+      ],
+      [
+        "target invocation 2",
+        1
+      ],
+      [
+        "target invocation 3",
+        1
+      ],
+      [
+        "target invocation 4",
+        1
+      ],
+      [
+        "target invocation 5",
+        1
+      ],
+      [
+        "target invocation 6",
+        1
+      ],
+      [
+        "target invocation 7",
+        1
+      ],
+      [
+        "target invocation 8",
+        1
+      ],
+      [
+        "target invocation 9",
+        1
+      ],
+      [
+        "target invocation 10",
+        1
+      ],
+      [
+        "target invocation 11",
+        1
+      ],
+      [
+        "target invocation 12",
+        1
+      ],
+      [
+        "target invocation 13",
+        1
+      ],
+      [
+        "target invocation 14",
+        1
+      ]
+    ],
+    "sha256": "aa2f5102cf0d9748ef3c7fdf9cb86528e3a4d6a9f3220c00878549a9c4d4f1c0"
+  },
+  "page-trace.txt": {
+    "size_bytes": 63562890,
+    "total_lines": 4237526,
+    "valid_addresses": 4237526,
+    "invalid_lines": 0,
+    "unique_addresses": 12405,
+    "unique_4k_pages": 85,
+    "top_10_pages": [
+      [
+        "0x7fffe45db",
+        2050148
+      ],
+      [
+        "0x7fffe45dc",
+        1068859
+      ],
+      [
+        "0x7fffe45d9",
+        467118
+      ],
+      [
+        "0x7fffe45da",
+        178748
+      ],
+      [
+        "0x7fffe43a1",
+        77493
+      ],
+      [
+        "0x7fffe4603",
+        67386
+      ],
+      [
+        "0x7fffe43a0",
+        48926
+      ],
+      [
+        "0x7fffe4602",
+        47595
+      ],
+      [
+        "0x7fffe45df",
+        46651
+      ],
+      [
+        "0x7fffe45de",
+        29761
+      ]
+    ],
+    "top_10_addresses": [
+      [
+        "0x7fffe45dce18",
+        13045
+      ],
+      [
+        "0x7fffe45dce1b",
+        13045
+      ],
+      [
+        "0x7fffe45dce20",
+        13045
+      ],
+      [
+        "0x7fffe45dce23",
+        13045
+      ],
+      [
+        "0x7fffe45dce26",
+        13045
+      ],
+      [
+        "0x7fffe45dce29",
+        13045
+      ],
+      [
+        "0x7fffe45dce2d",
+        13045
+      ],
+      [
+        "0x7fffe45dce31",
+        13045
+      ],
+      [
+        "0x7fffe45dce35",
+        13045
+      ],
+      [
+        "0x7fffe45dbe70",
+        12165
+      ]
+    ],
+    "annotations": [],
+    "sha256": "deafd3351ff23470b9c1c8b0cd75682a18ffb3b4fe857643113296213405f735"
+  },
+  "comparison": {
+    "lines_compared": 4237526,
+    "address_mismatches": 0,
+    "first_mismatches": []
+  }
+}

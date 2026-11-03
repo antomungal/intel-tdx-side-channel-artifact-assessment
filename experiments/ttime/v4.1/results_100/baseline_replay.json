@@ -1,0 +1,56 @@
+[
+  {
+    "condition": "baseline",
+    "method": "original",
+    "reference_sha256": "d1cdbd582781b4ff0890b67e0a3ee39b409b22142ff2a2a1f917e12bdb5515ae",
+    "reference_length": 64,
+    "recovered_length": 64,
+    "exact": true,
+    "error": ""
+  },
+  {
+    "condition": "baseline",
+    "method": "label_oracle_unfiltered",
+    "reference_sha256": "d1cdbd582781b4ff0890b67e0a3ee39b409b22142ff2a2a1f917e12bdb5515ae",
+    "reference_length": 64,
+    "recovered_length": 64,
+    "exact": true,
+    "error": ""
+  },
+  {
+    "condition": "baseline",
+    "method": "label_oracle_iqr",
+    "reference_sha256": "d1cdbd582781b4ff0890b67e0a3ee39b409b22142ff2a2a1f917e12bdb5515ae",
+    "reference_length": 64,
+    "recovered_length": 64,
+    "exact": true,
+    "error": ""
+  },
+  {
+    "condition": "full_baseline",
+    "method": "original",
+    "reference_sha256": "0f95673ebf6da894be2e5e3a9d7e448971a7a1e839ffa3460c39e2c74f7ac79a",
+    "reference_length": 2048,
+    "recovered_length": 2048,
+    "exact": true,
+    "error": ""
+  },
+  {
+    "condition": "full_baseline",
+    "method": "label_oracle_unfiltered",
+    "reference_sha256": "0f95673ebf6da894be2e5e3a9d7e448971a7a1e839ffa3460c39e2c74f7ac79a",
+    "reference_length": 2048,
+    "recovered_length": 2048,
+    "exact": true,
+    "error": ""
+  },
+  {
+    "condition": "full_baseline",
+    "method": "label_oracle_iqr",
+    "reference_sha256": "0f95673ebf6da894be2e5e3a9d7e448971a7a1e839ffa3460c39e2c74f7ac79a",
+    "reference_length": 2048,
+    "recovered_length": 2048,
+    "exact": true,
+    "error": ""
+  }
+]
