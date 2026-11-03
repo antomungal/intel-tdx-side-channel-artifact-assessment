@@ -47,16 +47,67 @@ on Intel TDX hardware.
 
 ## TDXdown
 
-Original repository: Pending verification.
-Exact revision: Pending verification.
-License: Pending verification.
+Original repository:
+https://github.com/UzL-ITS/tdxdown
 
-The assessment includes retained offline verification reports and
-locally developed verification procedures.
+Repository revision inspected:
+8aaa34f3da0d8d93637c66ca8e34aef3b7c45f76
 
-See experiments/tdxdown/PREFIX_RECONCILIATION.md for the documented
-difference between the original nonce-prefix predicate and the
-preserved audit report.
+Official artifact deposit:
+https://doi.org/10.5281/zenodo.12683611
+
+Verification date: 2026-11-03.
+
+The upstream README identifies the Zenodo deposit as the
+distribution source for the submitted experimental artifacts.
+
+The following local archives were compared against the
+file sizes and MD5 checksums published by Zenodo:
+
+1. tdxdown-paper-artifacts.zip
+
+   Size: 585841679 bytes
+   MD5: 8c17b1a94754b266c2ff1055e3a4eb7f
+   Result: MATCH
+
+2. cryptanalysis.zip
+
+   Size: 80368072 bytes
+   MD5: 96b0dd0057891906d562aeb0ae90c4c4
+   Result: MATCH
+
+Both local archives match the corresponding files in the
+official Zenodo record.
+
+The GitHub revision inspected contains documentation rather
+than the experimental source files. Consequently, the local
+experimental source is attributed to the verified Zenodo
+distribution, not to a matching Git source-tree revision.
+
+Licensing:
+The GitHub repository contains a GNU GPL version 3 license.
+Its applicability to individual components of the separately
+distributed Zenodo archives, including bundled third-party
+dependencies, has not been independently established.
+
+Redistribution:
+Neither original ZIP archive is redistributed in this
+assessment repository.
+
+The cryptanalysis archive must not be added to this
+repository because it contains private-key material.
+
+Assessment:
+The assessment includes retained offline verification reports
+and locally developed verification procedures.
+
+See experiments/tdxdown/PREFIX_RECONCILIATION.md for the
+documented difference between the original nonce-prefix
+predicate and the preserved audit report.
+
+The archive checksums establish correspondence with the
+published distribution. They do not establish successful
+reproduction of the original attack on Intel TDX hardware.
 
 ## TDXploit
 
