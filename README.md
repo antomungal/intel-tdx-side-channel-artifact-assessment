@@ -89,9 +89,15 @@ Some verification procedures require original datasets, source
 artifacts, or reference cryptographic material that is not
 redistributed here.
 
-The public package supports integrity checks and inspection of
-retained evidence. Full reproduction of all offline assessments
-requires separately obtained inputs.
+The repository is currently private and retains restricted
+experimental evidence, including synthetic T-Time traces that
+contain RSA private-exponent bits. It must not be made public
+without reviewing its contents and Git history.
+
+A future public artifact may provide verification scripts,
+integrity manifests, selected non-sensitive evidence, and
+reproducibility reports. Some offline assessments will require
+separately obtained original inputs.
 
 No claim is made that these procedures independently reproduce
 side-channel acquisition on Intel TDX hardware.

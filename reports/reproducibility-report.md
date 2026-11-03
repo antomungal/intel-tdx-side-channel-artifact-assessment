@@ -43,7 +43,8 @@ constitute private-key recovery.
 
 ## TDXploit
 
-The public package passed integrity and traceability checks.
+The assessed TDXploit evidence package passed the recorded
+integrity and traceability checks.
 
 Verification against original sources established:
 
@@ -73,10 +74,33 @@ upstream SHA-256 digests.
 The replay uses synthetic inputs and does not reproduce an attack
 on live Intel TDX hardware.
 
+An additional isolated offline replay was assessed on 4 November 2026,
+using Python 3.14.6 and cryptography 50.0.2. Its 125-byte JSON report
+was byte-identical to the preserved historical report, with SHA-256:
+
+`7f2f4aae1be667dc14269de2c8fd896d69a772ba862ff8064051680e5a7493e7`
+
+The additional report is preserved as
+`reports/ttime-v4.1-independent-replay-2026-11-04.json`.
+
+The comparison establishes report consistency. The isolated replay
+used the same original decoders and retained synthetic traces; it
+does not constitute independent algorithmic validation or hardware
+attack reproduction. An independent record of the process exit status
+was not retained.
+
+The original decoder scripts match the identified upstream revision,
+but their redistribution rights have not been established. The
+historical manifest's decoder-hash field does not independently
+establish which external scripts were executed.
+
 ## Reproducibility boundaries
 
-The public repository contains verification scripts, selected
-evidence, reports, and integrity manifests.
+The repository is currently private and contains verification
+scripts, selected evidence, reports, and integrity manifests.
+It also retains T-Time synthetic traces containing RSA
+private-exponent bits. Public release requires a separate
+review of the distributed files and Git history.
 
 Some original inputs are not redistributed because of their size,
 third-party provenance, or the presence of reference key material.
