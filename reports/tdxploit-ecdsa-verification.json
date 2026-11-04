@@ -1,0 +1,312 @@
+{
+  "verification_id": "TDXP-03",
+  "timestamp_utc": "2026-11-04T00:16:08.584780+00:00",
+  "scope": "Offline ECDSA verification of archived TDXploit signatures",
+  "curve": "brainpoolP224r1",
+  "signature_algorithm": "ECDSA",
+  "digest": "SHA-224",
+  "openssl": "OpenSSL 3.6.3 9 Jun 2026 (Library: OpenSSL 3.6.3 9 Jun 2026)",
+  "input_csv": "/Users/antoniomunoz/Desktop/INTEL TDX Validation/TDXploit_selected_signatures.csv",
+  "input_sha256": "c105ce1947907f74216336cbf06db06b2887089bd5aed9e871263b92620418d2",
+  "reference_public_key_pem_sha256": "a34fa1d74aa899b26f16b7e38d32b8de3b1ec5799e1b8b8b3389b67adc4cb008",
+  "selected_events": 41,
+  "counts": {
+    "valid": 38,
+    "missing": 3
+  },
+  "results": [
+    {
+      "run": "1",
+      "index_0based": "4918",
+      "iteration_1based": "4919",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "1",
+      "index_0based": "5488",
+      "iteration_1based": "5489",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "2",
+      "index_0based": "4943",
+      "iteration_1based": "4944",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "4",
+      "index_0based": "4739",
+      "iteration_1based": "4740",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "5",
+      "index_0based": "930",
+      "iteration_1based": "931",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "5",
+      "index_0based": "4762",
+      "iteration_1based": "4763",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "5",
+      "index_0based": "6618",
+      "iteration_1based": "6619",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "5",
+      "index_0based": "7935",
+      "iteration_1based": "7936",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "7",
+      "index_0based": "1345",
+      "iteration_1based": "1346",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "11",
+      "index_0based": "3376",
+      "iteration_1based": "3377",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "11",
+      "index_0based": "3948",
+      "iteration_1based": "3949",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "11",
+      "index_0based": "6629",
+      "iteration_1based": "6630",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "11",
+      "index_0based": "8511",
+      "iteration_1based": "8512",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "12",
+      "index_0based": "3128",
+      "iteration_1based": "3129",
+      "signature_status": "missing",
+      "verification": "missing"
+    },
+    {
+      "run": "12",
+      "index_0based": "4187",
+      "iteration_1based": "4188",
+      "signature_status": "missing",
+      "verification": "missing"
+    },
+    {
+      "run": "12",
+      "index_0based": "8178",
+      "iteration_1based": "8179",
+      "signature_status": "missing",
+      "verification": "missing"
+    },
+    {
+      "run": "14",
+      "index_0based": "514",
+      "iteration_1based": "515",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "14",
+      "index_0based": "2120",
+      "iteration_1based": "2121",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "14",
+      "index_0based": "2202",
+      "iteration_1based": "2203",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "14",
+      "index_0based": "8172",
+      "iteration_1based": "8173",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "16",
+      "index_0based": "6846",
+      "iteration_1based": "6847",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "17",
+      "index_0based": "1926",
+      "iteration_1based": "1927",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "17",
+      "index_0based": "9207",
+      "iteration_1based": "9208",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "18",
+      "index_0based": "349",
+      "iteration_1based": "350",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "18",
+      "index_0based": "9580",
+      "iteration_1based": "9581",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "19",
+      "index_0based": "2613",
+      "iteration_1based": "2614",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "19",
+      "index_0based": "5385",
+      "iteration_1based": "5386",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "19",
+      "index_0based": "9464",
+      "iteration_1based": "9465",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "20",
+      "index_0based": "5906",
+      "iteration_1based": "5907",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "21",
+      "index_0based": "3974",
+      "iteration_1based": "3975",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "22",
+      "index_0based": "5255",
+      "iteration_1based": "5256",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "22",
+      "index_0based": "6912",
+      "iteration_1based": "6913",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "22",
+      "index_0based": "9322",
+      "iteration_1based": "9323",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "24",
+      "index_0based": "4408",
+      "iteration_1based": "4409",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "24",
+      "index_0based": "4512",
+      "iteration_1based": "4513",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "25",
+      "index_0based": "9083",
+      "iteration_1based": "9084",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "26",
+      "index_0based": "175",
+      "iteration_1based": "176",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "26",
+      "index_0based": "217",
+      "iteration_1based": "218",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "26",
+      "index_0based": "2590",
+      "iteration_1based": "2591",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "26",
+      "index_0based": "5558",
+      "iteration_1based": "5559",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    },
+    {
+      "run": "26",
+      "index_0based": "8975",
+      "iteration_1based": "8976",
+      "signature_status": "hex_present",
+      "verification": "valid"
+    }
+  ],
+  "limitations": [
+    "Offline verification only.",
+    "The reference public key is derived from a known private key.",
+    "No independent Intel TDX hardware execution was performed.",
+    "No side-channel key recovery is established by this test."
+  ]
+}

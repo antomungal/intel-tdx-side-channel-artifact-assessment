@@ -110,3 +110,35 @@ original artifacts.
 
 The verification matrix in `reports/verification-matrix.csv`
 identifies the evidence and limitations of each assessment.
+
+## Additional cryptographic verification
+
+### TDXD-04: wolfSSL/secp160r1
+
+The archived recovery log reports two private-key candidates from a lattice-based procedure using 12 samples. An independent offline comparison against the reference key stored in the original signature dataset established that the first candidate matches the 160-bit reference key; the second does not. The lattice procedure and the original Intel TDX execution were not repeated.
+
+The original `key_recovery.py` also contains an intermediate-output defect: the second JSON write reuses the first output filename, overwriting the previously written sample data. The original third-party code has not been modified. The effect on preservation of intermediate files is documented separately from the historical recovery result.
+
+### TDXD-05: OpenSSL/brainpoolP224r1
+
+The original input contains a reference private key, a reference message and 33 signature records. The historical recovery log reports a recovered private key. An independent offline comparison confirmed that the recovered value equals the reference key. The original cryptanalytic solver and Intel TDX acquisition were not rerun.
+
+### TDXP-03: ECDSA signature verification
+
+An independent verification using OpenSSL 3.6.3, ECDSA over brainpoolP224r1 and SHA-224 accepted all 38 available signatures among 41 selected events. Three events lacked signatures; no available signature failed verification. The machine-readable report is `reports/tdxploit-ecdsa-verification.json`.
+
+The reference public key was derived from a known experimental private key. This verifies the mathematical validity of the archived signatures but does not independently demonstrate nonce leakage, private-key recovery or execution of TDXploit on Intel TDX hardware.
+
+### Evidence boundary
+
+The TDXdown key-recovery logs and original cryptographic datasets remain outside this repository. Their results have been checked locally but are not yet independently reproducible from the packaged artifact alone. The TDXploit verification report is packaged, while its original input CSV remains external. These distinctions must be retained in any public reproducibility claim.
+
+## T-Time v4.1 — verified fresh replay and decoder provenance
+
+A new functional replay was executed on a separate working copy of the retained v4.1 inputs, using the two unmodified T-Time decoder scripts from upstream commit `a0db080725e79339bcacbefd8fea4b6abdfcd352`. The scripts were verified against SHA-256 `01ab296dbbf084af1c2dc0e33eee85b41879b28c5e32c376dfceed6af32a1223` (`pattern_second.py`) and `98b55ffc08d3e319bb7b20fb902c68221ab0e19cfeb0c121104d582c1d8cb1b4` (`pattern_third.py`), matching the v4.1 campaign copies.
+
+The replay processed **2,501 retained synthetic traces**, checked **7,503 method outputs**, reported **zero failures**, returned `all_matched: true`, and exited with status **0**. The retained inputs were reused; neither the RSA key nor the observations were regenerated. The replay script wrote its report into a temporary working copy, leaving the published inputs unchanged.
+
+The original scripts are third-party dependencies and are not tracked in the assessment repository. A clean checkout therefore requires obtaining the scripts separately from the pinned upstream revision, checking their SHA-256 digests, and placing them under `experiments/ttime/v4.1/original/`. The v4.1 README documents this procedure.
+
+The T-Time v4.1 reconstruction results are repeatable using the retained synthetic inputs and the original, hash-verified upstream decoders. This does not establish independent decoder correctness or reproduce side-channel acquisition on Intel TDX hardware. The retained `reference_bits` may expose the private exponent of the throwaway experimental RSA key and must be treated as disclosed experimental data. The replay does not independently establish the cryptographic validity of a reconstructed exponent.

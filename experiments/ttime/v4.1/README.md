@@ -1,25 +1,87 @@
-# T-Time v4.1 — auditable RSA-derived synthetic experiments
+# T-Time v4.1 — auditable synthetic RSA-derived reconstruction
 
 Author: Antonio Muñoz - NICS Lab - UMA
 
 ## Scientific scope
 
-This is **synthetic** encoding of bits of a valid RSA-2048 private exponent, **not** an execution-derived timing trace, Intel TDX leakage, or a demonstrated hardware RSA attack. Original third-party T-Time scripts in `original/` are unchanged.
+This campaign evaluates the original T-Time reconstruction routines on synthetic observations derived from a valid RSA-2048 private exponent. These are not execution-derived timing measurements from an Intel TDX trust domain, nor evidence of a reproduced hardware RSA attack. The original third-party decoders are not modified.
 
-## Run 100 repetitions per condition
+## Recorded campaign
+
+The campaign consists of 25 perturbation conditions with 100 repetitions each (64-bit windows), plus one full-length baseline. It retains 2,501 input traces (2,500 windows and one baseline), 7,503 trial-method outputs across three methods, and 78 summary rows. The full baseline is one trace, not 100 repetitions. The two label-oracle methods use privileged generator labels and are not deployable attacks.
+
+## Upstream decoder dependencies
+
+The assessment repository does not redistribute the original T-Time scripts. Obtain the following unmodified files from https://github.com/koreacsl/T-Time at commit:
+
+`a0db080725e79339bcacbefd8fea4b6abdfcd352`
+
+Upstream directory: `attack/T-Time_poc_host/poc/evaluation_mbedtls/parse/restore/`
+
+- `pattern_second.py`: SHA-256 `01ab296dbbf084af1c2dc0e33eee85b41879b28c5e32c376dfceed6af32a1223`
+- `pattern_third.py`: SHA-256 `98b55ffc08d3e319bb7b20fb902c68221ab0e19cfeb0c121104d582c1d8cb1b4`
+
+Place the two files in `experiments/ttime/v4.1/original/`. The files are third-party code and must retain their original contents and attribution. The listed SHA-256 values were verified against both the pinned upstream commit and the v4.1 campaign copies.
+
+### Retrieve and verify the original decoders
+
+Run the following commands from `experiments/ttime/v4.1/`. This fetches the pinned upstream revision separately and checks the decoder files before use. Do not add the upstream scripts to the assessment repository without establishing redistribution permissions.
 
 ```bash
-python3 -m pip install cryptography
-python3 run_v4.py --repeats 100 --window 64 --full-baseline --retain-traces --output results_100
+# Author: Antonio Muñoz - NICS Lab - UMA
+set +e
+UPSTREAM_DIR="$(mktemp -d "${TMPDIR:-/tmp/}ttime-upstream-XXXXXX")"
+git clone --quiet https://github.com/koreacsl/T-Time.git "$UPSTREAM_DIR/T-Time"
+if [ "$?" -ne 0 ]; then
+    echo "ERROR: Upstream clone failed"
+else
+    SOURCE='attack/T-Time_poc_host/poc/evaluation_mbedtls/parse/restore'
+    COMMIT='a0db080725e79339bcacbefd8fea4b6abdfcd352'
+    mkdir -p original
+    for NAME in pattern_second.py pattern_third.py; do
+        git -C "$UPSTREAM_DIR/T-Time" show "$COMMIT:$SOURCE/$NAME" > "original/$NAME"
+    done
+    shasum -a 256 original/pattern_second.py original/pattern_third.py
+    echo 'Compare both SHA-256 values with the pinned values documented above.'
+fi
+```
+
+The clone step may be large because the upstream repository contains additional components. An existing verified local clone of the pinned upstream revision may be used instead. Do not execute the replay if either hash differs.
+
+## Replay retained results (do not regenerate the campaign)
+
+Install the required Python dependency in an isolated environment (`cryptography`). To avoid overwriting the published `replay_report.json`, copy the entire `v4.1` directory, including `results_100`, to a separate working directory; ensure the verified upstream decoders are present under its `original/` directory. Then run from that copied `v4.1` directory:
+
+```bash
 python3 replay_v4_1.py --output results_100
 ```
 
-Expected: 25 conditions × 100 repetitions × 3 methods + 3 full-baseline method outputs = **7503** trial-method rows; 2501 retained trace pairs (2500 windows plus one full baseline), 78 summary rows, and 7503 replay checks. The full baseline is one key and one trace, not 100 trials.
+The replay checks the SHA-256 of `results_100/trace_replay.jsonl` against `results_100/manifest.json`, executes the original decoders for every retained trace, and compares the recovered output, errors, exact-recovery flag, and edit distance against retained records. The script writes `results_100/replay_report.json` in its working copy.
 
-**Sensitive:** `--retain-traces` writes the original bitstrings and synthetic observations; both can reveal the RSA private exponent. Keep `results_100` private, do not publish or share it unchanged, and do not use a production RSA key. The generated key is a throwaway experiment key. The traces permit replay of the original decoders, but the cryptographic key-generation event is not deterministic and is not reproduced from a seed.
+A fresh replay on a separate copy of a clean checkout, with the two original decoder scripts restored from the pinned upstream commit and verified by SHA-256, completed successfully:
 
-Without `--retain-traces`, aggregate outputs are generated but individual trace replay is unavailable. Preserve `manifest.json`, `trials.csv`, `summary.csv`, `baseline_replay.json`, and `replay_report.json`. `replay_v4_1.py` checks all retained traces and method outputs. Original scripts are third-party and not assigned the authorship header.
+- `trace_count`: 2,501
+- `method_outputs_checked`: 7,503
+- `expected_rows`: 7,503
+- `failures`: 0
+- `all_matched`: `true`
+- process exit status: 0
 
-## Important limitations
+This establishes repeatability of the recorded outputs with the original decoder implementations. It is not an independent validation of those decoders and does not reproduce timing acquisition on Intel TDX hardware.
 
-The two oracle methods use privileged generator labels and are not deployable attacks. The decoder's event model is assumed rather than derived from a real RSA implementation. The manifest's signature verification and modular arithmetic check validate the original key, not necessarily a recovered key. An exact match of the reconstructed exponent is the primary full-baseline check. A separate reconstructed-exponent cryptographic operation remains a recommended follow-up.
+## Generate a separate new campaign (optional)
+
+Do **not** run this command against the retained published `results_100` directory. It creates a new RSA key and new observations; perturbation seeds do not make key generation deterministic.
+
+```bash
+python3 -m pip install cryptography
+python3 run_v4.py --repeats 100 --window 64 --full-baseline --retain-traces --output results_new
+```
+
+Without `--retain-traces`, aggregate outputs can be generated but individual trace replay is unavailable.
+
+## Data disclosure and interpretation
+
+`trace_replay.jsonl` contains RSA-derived reference bits and synthetic observations that may disclose the private exponent of the throwaway experimental RSA key. The retained trace file is already included in the assessment repository. It must not be treated as secret material or reused as a production key. This disclosure and the absence of production-key use must be explicitly considered when distributing or reusing the dataset.
+
+The manifest's signature verification and modular-arithmetic checks validate the original generated RSA key, not necessarily a recovered key. Exact recovery of the reconstructed exponent is the primary full-baseline check; a separate cryptographic operation with the reconstructed exponent remains an additional, unperformed validation. The event model is assumed, rather than derived from execution-derived RSA observations.
