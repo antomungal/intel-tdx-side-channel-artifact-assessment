@@ -9,3 +9,6 @@ __pycache__/
 *.sqlite
 *.db
 private/
+
+# Original third-party T-Time decoders; retrieve from pinned upstream revision
+/experiments/ttime/v4.1/original/

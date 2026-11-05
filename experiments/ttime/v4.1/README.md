@@ -29,21 +29,45 @@ Run the following commands from `experiments/ttime/v4.1/`. This fetches the pinn
 
 ```bash
 # Author: Antonio Muñoz - NICS Lab - UMA
-set +e
+(
+(
+set -e
+
+COMMIT='a0db080725e79339bcacbefd8fea4b6abdfcd352'
+SOURCE='attack/T-Time_poc_host/poc/evaluation_mbedtls/parse/restore'
+
 UPSTREAM_DIR="$(mktemp -d "${TMPDIR:-/tmp/}ttime-upstream-XXXXXX")"
+trap 'rm -rf "$UPSTREAM_DIR"' EXIT
+
 git clone --quiet https://github.com/koreacsl/T-Time.git "$UPSTREAM_DIR/T-Time"
-if [ "$?" -ne 0 ]; then
-    echo "ERROR: Upstream clone failed"
-else
-    SOURCE='attack/T-Time_poc_host/poc/evaluation_mbedtls/parse/restore'
-    COMMIT='a0db080725e79339bcacbefd8fea4b6abdfcd352'
-    mkdir -p original
-    for NAME in pattern_second.py pattern_third.py; do
-        git -C "$UPSTREAM_DIR/T-Time" show "$COMMIT:$SOURCE/$NAME" > "original/$NAME"
-    done
-    shasum -a 256 original/pattern_second.py original/pattern_third.py
-    echo 'Compare both SHA-256 values with the pinned values documented above.'
-fi
+git -C "$UPSTREAM_DIR/T-Time" cat-file -e "$COMMIT^{commit}"
+
+mkdir -p original
+
+for NAME in pattern_second.py pattern_third.py; do
+    git -C "$UPSTREAM_DIR/T-Time" show "$COMMIT:$SOURCE/$NAME" > "$UPSTREAM_DIR/$NAME"
+done
+
+printf '%s  %s\\n' \\
+    '01ab296dbbf084af1c2dc0e33eee85b41879b28c5e32c376dfceed6af32a1223' \\
+    "$UPSTREAM_DIR/pattern_second.py" \\
+    '98b55ffc08d3e319bb7b20fb902c68221ab0e19cfeb0c121104d582c1d8cb1b4' \\
+    "$UPSTREAM_DIR/pattern_third.py" | shasum -a 256 -c
+
+for NAME in pattern_second.py pattern_third.py; do
+    if [ -e "original/$NAME" ]; then
+        cmp "original/$NAME" "$UPSTREAM_DIR/$NAME" || {
+            echo "ERROR: Existing decoder differs: $NAME" >&2
+            exit 1
+        }
+    else
+        cp "$UPSTREAM_DIR/$NAME" "original/$NAME"
+    fi
+done
+
+echo "PASS: Original T-Time decoders verified."
+)
+)
 ```
 
 The clone step may be large because the upstream repository contains additional components. An existing verified local clone of the pinned upstream revision may be used instead. Do not execute the replay if either hash differs.

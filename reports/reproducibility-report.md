@@ -96,11 +96,16 @@ establish which external scripts were executed.
 
 ## Reproducibility boundaries
 
-The repository is currently private and contains verification
-scripts, selected evidence, reports, and integrity manifests.
-It also retains T-Time synthetic traces containing RSA
-private-exponent bits. Public release requires a separate
-review of the distributed files and Git history.
+The repository contains verification scripts, selected evidence,
+reports, integrity manifests, and retained T-Time synthetic traces.
+The latter contain bits of an RSA-2048 private exponent generated
+exclusively for the evaluation. This experimental key is considered
+disclosed and must not be reused for security-sensitive purposes.
+
+The traces are retained for exact offline replay, not as evidence
+of successful key recovery from Intel TDX hardware. Public release
+remains conditional on reviewing distributed files, the complete
+Git history, third-party licensing, and sensitive material.
 
 Some original inputs are not redistributed because of their size,
 third-party provenance, or the presence of reference key material.

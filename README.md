@@ -89,15 +89,16 @@ Some verification procedures require original datasets, source
 artifacts, or reference cryptographic material that is not
 redistributed here.
 
-The repository is currently private and retains restricted
-experimental evidence, including synthetic T-Time traces that
-contain RSA private-exponent bits. It must not be made public
-without reviewing its contents and Git history.
+The artifact includes retained T-Time traces containing bits of
+an RSA-2048 private exponent generated exclusively for synthetic
+evaluation. This experimental key is considered disclosed and must
+never be reused for security-sensitive purposes. The traces are
+retained to permit exact offline replay of the recorded results.
 
-A future public artifact may provide verification scripts,
-integrity manifests, selected non-sensitive evidence, and
-reproducibility reports. Some offline assessments will require
-separately obtained original inputs.
+The repository is being prepared for public distribution. Release
+remains conditional on a review of the complete Git history,
+distributed files, third-party licensing, and sensitive material.
+Some offline assessments require separately obtained original inputs.
 
 No claim is made that these procedures independently reproduce
 side-channel acquisition on Intel TDX hardware.
